@@ -1,0 +1,48 @@
+﻿Admin Login Product Management System Web Application
+
+
+1. Requirements:
+* PHP 8.4.6
+* MySQL 14.14
+* Apache server (MAMP for macOS / XAMPP for windows, linux, maxOS x)
+* Composer 2.8.8
+* VS Code (Text Editor)
+
+
+2. Download MAMP/XAMPP
+
+
+3. Access the local server at http://localhost:8888
+4. Place the project files in the directory : /Applications/MAMP/htdocs/admin_product_app
+5. Database Setup:
+* Go to : http://localhost:8888/phpMyAdmin
+* Create database: product_db
+* Run the SQL query to make a table 
+
+
+CREATE TABLE products (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  productname VARCHAR(255),
+  product_category VARCHAR(255),
+  product_desc TEXT,
+  serialno VARCHAR(255) UNIQUE
+);
+
+
+6. Install Composer & PhpSpreadsheet
+* Go to the project directory in terminal and run 
+composer require phpoffice/phpspreadsheet
+
+
+7. Launch the web application
+* http://localhost:8888/admin_product_app/login.html
+* Username: admin
+* Password: admin123
+
+
+Technologies Used
+* PHP (Core)
+* MySQL (Storing Data)
+* Bootstrap 5 (Frontend)
+* PhpSpreadsheet (Excel integration)
+* AES Encryption (URL protection)
